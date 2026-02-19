@@ -1,4 +1,5 @@
 # Mintlify Starter Kit
+Bhargav-Manepalli
 
 Use the starter kit to get your docs deployed and ready to customize.
 
