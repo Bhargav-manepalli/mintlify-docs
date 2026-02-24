@@ -1,0 +1,35 @@
+---
+title: "Generate SDK Artifacts"
+description: "Build qcom-qim-product-sdk and locate output artifacts."
+---
+
+# Generate SDK Artifacts
+
+## Build command
+
+```bash
+bitbake qcom-qim-product-sdk
+```
+
+## Output location
+
+The layer documents an artifacts directory under the build deploy tree. In many setups you’ll see something like:
+
+```text
+<release>/build-<distro>/tmp-*/deploy/qim_prod_sdk_artifacts/
+```
+
+## What’s typically inside
+
+- SDK headers and libraries
+- plugin binaries and dependencies
+- sample applications / pipelines
+- scripts to install/uninstall (varies by release)
+
+## Recommended artifact publishing
+
+- Compress artifacts per build id:
+  ```bash
+  tar -C <artifacts-dir> -czf qim_sdk_artifacts_<build>.tar.gz .
+  ```
+- Publish with checksums (sha256) and the exact manifest/layer tag metadata.

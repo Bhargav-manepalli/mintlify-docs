@@ -1,0 +1,32 @@
+---
+title: "Repo Structure"
+description: "How the layer is organized and where to look for changes."
+---
+
+# Repository Structure
+
+`meta-qcom-qim-product-sdk` follows standard Yocto layer conventions:
+
+- `conf/` — layer configuration and compatibility
+- `classes/` — shared packaging and integration helpers
+- `recipes-*/` — BitBake recipes grouped by domain
+  - `recipes-gst/` — multimedia / GStreamer components
+  - `recipes-qcom-ml/` — machine-learning components
+  - `recipes-tensorflow-lite/` — TensorFlow Lite / LiteRT packaging
+  - `recipes-qim-product-sdk/` — product SDK aggregation and artifacts
+  - `recipes-support/` — support packages
+  - `recipes-devtools/` — build/dev tools (example: protobuf)
+
+## Recommended customization pattern
+
+Prefer one of these approaches:
+
+1. **Create a product layer** (recommended): `meta-yourproduct`
+   - Add `.bbappend` files and configs without forking vendor layers.
+2. If you must fork, keep the fork minimal and track upstream tags.
+
+## Where to start when debugging
+
+- Add `bitbake -e <recipe> | less` to inspect variables.
+- Use `bitbake -g <target>` to generate dependency graphs.
+- Inspect `tmp/work/<machine>/<recipe>/<version>/temp/log.do_*` for failures.

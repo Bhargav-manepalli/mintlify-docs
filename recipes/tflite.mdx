@@ -1,0 +1,22 @@
+---
+title: "TensorFlow Lite / LiteRT"
+description: "Where TFLite/LiteRT packaging lives and how to manage versions." 
+---
+
+# TensorFlow Lite / LiteRT
+
+## Where to look
+
+- `recipes-tensorflow-lite/` contains recipes to package TFLite/LiteRT components.
+
+## Versioning best practices
+
+- Keep versions aligned with the BSP release
+- Avoid mixing runtime versions across major releases
+- Prefer vendor-provided tags in production
+
+## Quick checks on target
+
+```bash
+ls -l /usr/lib | grep -i tflite || true
+```

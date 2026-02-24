@@ -1,0 +1,15 @@
+# QIM Product SDK Docs
+
+This site documents the Yocto layer meta-qcom-qim-product-sdk.
+
+Key pages:
+- /quickstart
+- /build-image
+- /artifacts
+- /sdks
+- /repo-structure
+
+Use cases:
+- How to sync a Qualcomm Linux Yocto BSP and add the QIM Product SDK layer
+- How to build qcom-multimedia-image
+- How to generate qcom-qim-product-sdk artifacts and Yocto SDK installers

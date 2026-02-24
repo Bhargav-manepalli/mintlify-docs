@@ -1,0 +1,33 @@
+---
+title: "Recipes Overview"
+description: "How recipes are organized in this layer and how to extend them." 
+---
+
+# Recipes Overview
+
+This layer groups recipes by domain (multimedia, ML, SDK aggregation, and support).
+
+## How to inspect a recipe
+
+```bash
+bitbake -e <recipe> | less
+```
+
+## How to extend without forking
+
+Create a `.bbappend` in your product layer that matches the recipe name/version:
+
+```text
+meta-yourproduct/
+  recipes-gst/
+    qtiqmmfsrc/
+      qtiqmmfsrc_%.bbappend
+```
+
+Then add patches or variable overrides.
+
+## How to find which recipe provides a file
+
+```bash
+oe-pkgdata-util find-path /usr/lib/<something>.so
+```

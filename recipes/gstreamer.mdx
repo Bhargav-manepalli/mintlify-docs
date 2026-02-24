@@ -1,0 +1,27 @@
+---
+title: "GStreamer & Multimedia"
+description: "Where multimedia components live and how to validate your runtime." 
+---
+
+# GStreamer & Multimedia
+
+## Where to look
+
+- `recipes-gst/` contains multimedia and GStreamer related recipes.
+
+## Runtime validation checklist
+
+On target:
+
+```bash
+gst-inspect-1.0 | head
+```
+
+If plugins are missing:
+- confirm packages installed
+- confirm plugin path and `GST_PLUGIN_PATH`
+- verify dependencies are present
+
+## Creating a minimal test pipeline
+
+Start with a simple pipeline that exercises the relevant plugin set, then evolve to a full use-case.

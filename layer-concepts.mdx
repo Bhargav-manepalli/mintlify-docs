@@ -1,0 +1,29 @@
+---
+title: "Layer Concepts"
+description: "Key Yocto concepts used by this layer: recipes, packagegroups, images, and artifacts."
+---
+
+# Layer Concepts
+
+## Recipes
+
+A **recipe** (`.bb`) describes how to fetch, configure, build, and package a component.
+
+## Packagegroups
+
+A **packagegroup** aggregates multiple packages into one install target, usually to make image composition easy.
+
+## Images
+
+An **image recipe** defines the root filesystem composition. When you build `qcom-multimedia-image`, you’re building an image recipe that pulls in packagegroups and packages.
+
+## Artifacts target
+
+A dedicated target like `qcom-qim-product-sdk` typically gathers and stages deliverables (headers, libs, samples, docs) into a deploy directory suitable for SDK distribution.
+
+## Prebuilt vs source
+
+Many vendor layers provide some components as prebuilts for reproducibility and licensing reasons. When you want source builds, look for:
+- alternative recipes
+- build flags in `conf/`
+- `.bbappend` hooks

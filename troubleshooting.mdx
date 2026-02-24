@@ -1,0 +1,50 @@
+---
+title: "Troubleshooting"
+description: "Common Yocto issues and how to debug quickly."
+---
+
+# Troubleshooting
+
+## 1) Fetch failures (network / mirrors)
+
+Symptoms:
+- `do_fetch` errors
+
+Fixes:
+- configure `PREMIRRORS`/`MIRRORS`
+- allow required domains through proxy
+- cache `DL_DIR` in CI
+
+## 2) Checksum / SRC_URI changes
+
+Symptoms:
+- `SRC_URI` fails or checksum mismatch
+
+Fixes:
+- verify the tag/branch matches the manifest release
+- update recipe checksums only when you intentionally change the source
+
+## 3) sstate problems
+
+Symptoms:
+- inconsistent builds or errors after upgrades
+
+Fixes:
+- wipe or rotate `SSTATE_DIR` for major Yocto upgrades
+- run `bitbake -c cleansstate <recipe>`
+
+## 4) Image composition
+
+Symptoms:
+- missing packages/plugins
+
+Fixes:
+- check `IMAGE_INSTALL` and packagegroups
+- verify runtime dependencies are packaged
+- inspect `oe-pkgdata-util list-pkgs` output
+
+## What to attach when filing bugs
+
+- `tmp/work/.../temp/log.do_*`
+- `bitbake -e <recipe>` output for key variables
+- build host info + distro

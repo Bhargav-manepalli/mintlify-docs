@@ -1,0 +1,30 @@
+---
+title: "Flash the Image"
+description: "General flashing guidance and what to capture for support."
+---
+
+# Flash the Image
+
+Flashing steps vary by board (RB3 Gen 2, Vision Kit, etc.) and BSP release.
+
+## Before you flash
+
+Capture:
+- the exact manifest XML name
+- `repo manifest -r` output
+- layer tags/commits
+- image file names from `deploy/images/<machine>/`
+
+## Common pitfalls
+
+- Using an image built for a different `MACHINE`
+- Mismatched boot firmware vs rootfs release
+- Missing EULA acceptance flags (if applicable)
+
+## Recommended practice
+
+Keep a `flash/` runbook per board in your organization that maps:
+- host tools versions
+- board switch settings
+- commands
+- recovery steps

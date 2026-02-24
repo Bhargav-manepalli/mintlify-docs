@@ -1,0 +1,26 @@
+---
+title: "FAQ"
+description: "Answers to common questions about using this layer and the generated SDK." 
+---
+
+# FAQ
+
+## Should docs live inside the Yocto layer repo?
+
+Usually no. Keeping docs in a dedicated docs repo keeps Yocto metadata clean and makes publishing simpler.
+
+## What should I customize first?
+
+- A product layer with `.bbappend` overrides
+- A packagegroup that represents your product feature set
+- CI scripts that pin exact versions and capture metadata
+
+## How do I keep builds reproducible?
+
+- Pin manifest XML, branches, and layer tags
+- Cache `DL_DIR` and `SSTATE_DIR`
+- Publish build metadata and checksums with artifacts
+
+## Can I add my own application?
+
+Yes. Add a new recipe in your product layer and include it via packagegroup or `IMAGE_INSTALL:append`.

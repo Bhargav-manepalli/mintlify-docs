@@ -1,0 +1,22 @@
+---
+title: "ML Components"
+description: "How ML-related components are organized and validated." 
+---
+
+# ML Components
+
+## Where to look
+
+- `recipes-qcom-ml/` typically holds recipes for ML runtimes, delegates, and accelerators.
+
+## Validation approach
+
+- Verify libraries exist under `/usr/lib` (or distro equivalent)
+- Run provided sample apps/pipelines
+- Compare performance (CPU vs accelerator)
+
+## Troubleshooting
+
+- Check that the correct delegate/runtime is installed
+- Confirm the model format is supported by your runtime
+- Collect runtime logs and pipeline caps negotiation details

@@ -1,0 +1,43 @@
+---
+title: "Build the Image"
+description: "Build qcom-multimedia-image and locate the resulting output."
+---
+
+# Build the Image
+
+## Build command
+
+```bash
+bitbake qcom-multimedia-image
+```
+
+## Output location
+
+Image deploy paths depend on the BSP and machine, but you will typically find images in:
+
+```text
+<release>/build-<distro>/tmp-*/deploy/images/<machine>/
+```
+
+## Useful build options
+
+- Clean a recipe:
+  ```bash
+  bitbake -c cleansstate <recipe>
+  ```
+- Rebuild only:
+  ```bash
+  bitbake <target> -f
+  ```
+- Increase logging:
+  ```bash
+  bitbake -v <target>
+  ```
+
+## CI tip
+
+Cache downloads and sstate to speed up CI:
+- `DL_DIR`
+- `SSTATE_DIR`
+
+Keep `MACHINE`, `DISTRO`, and layer tags pinned for reproducible outputs.
