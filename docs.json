@@ -1,5 +1,6 @@
 {
   "name": "QIM Product SDK (Yocto Layer)",
+  "theme": "mint",
   "logo": {
     "light": "/assets/logo-light.svg",
     "dark": "/assets/logo-dark.svg"
