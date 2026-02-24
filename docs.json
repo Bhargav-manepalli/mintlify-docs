@@ -1,48 +1,18 @@
-{
-  "name": "QIM Product SDK (Yocto Layer)",
-  "theme": "mint",
-  "logo": {
-    "light": "/assets/logo-light.svg",
-    "dark": "/assets/logo-dark.svg"
-  },
-  "favicon": "/assets/favicon.svg",
-  "navigation": [
-    {
-      "group": "Overview",
-      "pages": [
-        "index",
-        "quickstart",
-        "repo-structure",
-        "layer-concepts"
-      ]
-    },
-    {
-      "group": "Build & Release",
-      "pages": [
-        "build-image",
-        "artifacts",
-        "sdks",
-        "flash"
-      ]
-    },
-    {
-      "group": "Recipes",
-      "pages": [
-        "recipes/overview",
-        "recipes/gstreamer",
-        "recipes/ml",
-        "recipes/tflite"
-      ]
-    },
-    {
-      "group": "Operations",
-      "pages": [
-        "troubleshooting",
-        "faq"
-      ]
-    }
-  ],
-  "colors": {
-    "primary": "#2E7D32"
-  }
+"navigation": {
+  "pages": [
+    "index",
+    "quickstart",
+    "repo-structure",
+    "layer-concepts",
+    "build-image",
+    "artifacts",
+    "sdks",
+    "flash",
+    "recipes/overview",
+    "recipes/gstreamer",
+    "recipes/ml",
+    "recipes/tflite",
+    "troubleshooting",
+    "faq"
+  ]
 }
