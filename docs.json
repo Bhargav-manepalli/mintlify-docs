@@ -9,11 +9,7 @@
   "colors": {
     "primary": "#0D9373",
     "light": "#07C983",
-    "dark": "#0D9373",
-    "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
-    }
+    "dark": "#0D9373"
   },
   "topbarLinks": [
     {
@@ -25,42 +21,50 @@
     "name": "GitHub",
     "url": "https://github.com/qualcomm-linux/meta-qcom-qim-product-sdk"
   },
-  "navigation": [
+  "tabs": [
     {
-      "group": "Getting Started",
-      "pages": [
-        "index",
-        "quickstart",
-        "repo-structure",
-        "layer-concepts"
-      ]
-    },
-    {
-      "group": "Build & Deploy",
-      "pages": [
-        "build-image",
-        "artifacts",
-        "sdks",
-        "flash"
-      ]
-    },
-    {
-      "group": "Recipes",
-      "pages": [
-        "recipes/overview",
-        "recipes/gstreamer",
-        "recipes/ml",
-        "recipes/tflite"
-      ]
-    },
-    {
-      "group": "Support",
-      "pages": [
-        "troubleshooting",
-        "faq"
-      ]
+      "name": "Documentation",
+      "url": "/"
     }
   ],
+  "navigation": {
+    "pages": [
+      {
+        "group": "Getting Started",
+        "pages": [
+          "index",
+          "quickstart",
+          "repo-structure",
+          "layer-concepts"
+        ]
+      },
+      {
+        "group": "Build & Deploy",
+        "pages": [
+          "build-image",
+          "artifacts",
+          "sdks",
+          "flash"
+        ]
+      },
+      {
+        "group": "Recipes",
+        "pages": [
+          "recipes/overview",
+          "recipes/gstreamer",
+          "recipes/ml",
+          "recipes/tflite"
+        ]
+      },
+      {
+        "group": "Support",
+        "pages": [
+          "troubleshooting",
+          "faq"
+        ]
+      }
+    ]
+  },
   "footerSocials": {
     "github": "https://github.com/qualcomm-linux"
   }
